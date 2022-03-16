@@ -1,0 +1,31 @@
+button{
+  width: 100%;
+  height: 80px;
+  margin-bottom: 5px;
+}
+select{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 5px;
+}
+#status{
+  width: 100%;
+  height: 20px;
+  margin: 15px 0 15px 0;
+  border-radius: 40px;
+}
+.off{
+  background-color: rgb(230, 230, 230);
+}
+.on{
+  background-color: rgb(59, 255, 157);
+  -moz-box-shadow:    inset 0 0 2px rgb(14, 201, 107);
+  -webkit-box-shadow: inset 0 0 2px rgb(14, 201, 107);
+  box-shadow:         inset 0 0 2px rgb(14, 201, 107);
+}
+.error{
+  background-color: rgb(255, 59, 69);
+  -moz-box-shadow:    inset 0 0 2px rgb(226, 38, 47);
+  -webkit-box-shadow: inset 0 0 2px rgb(226, 38, 47);
+  box-shadow:         inset 0 0 2px rgb(226, 38, 47);
+}
