@@ -9,48 +9,41 @@ document.getElementById("connect").addEventListener("click", function() {
   .then(characteristic => {
 
       document.getElementById("off").addEventListener("click", function(){
-          const resetEnergyExpended = Uint8Array.of(48);
-          return characteristic.writeValue(resetEnergyExpended);
+          return characteristic.writeValue(Uint8Array.of(48));
       });
 
       document.getElementById("red").addEventListener("click", function(){
-          const resetEnergyExpended = Uint8Array.of(49);
-          return characteristic.writeValue(resetEnergyExpended);
+          return characteristic.writeValue(Uint8Array.of(49));
       });
 
       document.getElementById("green").addEventListener("click", function(){
-          const resetEnergyExpended = Uint8Array.of(50);
-          return characteristic.writeValue(resetEnergyExpended);
+          return characteristic.writeValue(Uint8Array.of(50));
       });
 
       document.getElementById("blue").addEventListener("click", function(){
-          const resetEnergyExpended = Uint8Array.of(51);
-          return characteristic.writeValue(resetEnergyExpended);
+          return characteristic.writeValue(Uint8Array.of(51));
+      });
+
+      document.getElementById("yellow").addEventListener("click", function(){
+          return characteristic.writeValue(Uint8Array.of(52));
       });
 
       document.getElementById("white").addEventListener("click", function(){
-          const resetEnergyExpended = Uint8Array.of(52);
-          return characteristic.writeValue(resetEnergyExpended);
+        return characteristic.writeValue(Uint8Array.of(53));
       });
-
-
-      // const btn = document.querySelector('#btn');
-      // const sb = document.querySelector('#framework')
-      // btn.onclick = (event) => {
-      //     event.preventDefault();
-      //     // show the selected index
-      //     alert(sb.selectedIndex);
-      // };
 
   })
   .then(_ => {
+
       document.getElementById("status").className = "on";  
       console.log('Lamp is connected');
-  })
 
+  })
   .catch(error => { 
+
       document.getElementById("status").className = "error"; 
       console.error(error); 
+      
   });
 
 });
