@@ -1,5 +1,11 @@
 import './style.css'
 
+const slider = document.querySelector("#brightness");
+
+slider.addEventListener ("input", function () {
+   console.log(this.value);
+});
+
 document.getElementById("connect").addEventListener("click", function() {
 
   navigator.bluetooth.requestDevice({ filters: [{ services: ['4fafc201-1fb5-459e-8fcc-c5c9c331914b'] }] })
@@ -37,6 +43,7 @@ document.getElementById("connect").addEventListener("click", function() {
 
       document.getElementById("status").className = "on";  
       console.log('Lamp is connected');
+
 
   })
   .catch(error => { 
