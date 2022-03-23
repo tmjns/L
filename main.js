@@ -58,6 +58,7 @@ const addBtn = document.querySelector('.add-button');
 
 window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
+    console.log("1");
     e.preventDefault();
     // Stash the event so it can be triggered later.
     deferredPrompt = e;
@@ -66,6 +67,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
   
     addBtn.addEventListener('click', (e) => {
       // hide our user interface that shows our A2HS button
+      console.log("2");
       addBtn.style.display = 'none';
       // Show the prompt
       deferredPrompt.prompt();
