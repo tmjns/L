@@ -1,10 +1,4 @@
-import './style.css'
-
-const slider = document.querySelector("#brightness");
-
-slider.addEventListener ("input", function () {
-   console.log(this.value);
-});
+import './style.scss'
 
 document.getElementById("connect").addEventListener("click", function() {
 
@@ -15,27 +9,31 @@ document.getElementById("connect").addEventListener("click", function() {
   .then(characteristic => {
 
       document.getElementById("off").addEventListener("click", function(){
-          return characteristic.writeValue(Uint8Array.of(48));
-      });
-
-      document.getElementById("red").addEventListener("click", function(){
-          return characteristic.writeValue(Uint8Array.of(49));
-      });
-
-      document.getElementById("green").addEventListener("click", function(){
-          return characteristic.writeValue(Uint8Array.of(50));
-      });
-
-      document.getElementById("blue").addEventListener("click", function(){
           return characteristic.writeValue(Uint8Array.of(51));
       });
 
-      document.getElementById("yellow").addEventListener("click", function(){
+      document.getElementById("red").addEventListener("click", function(){
           return characteristic.writeValue(Uint8Array.of(52));
       });
 
+      document.getElementById("green").addEventListener("click", function(){
+          return characteristic.writeValue(Uint8Array.of(53));
+      });
+
+      document.getElementById("blue").addEventListener("click", function(){
+          return characteristic.writeValue(Uint8Array.of(54));
+      });
+
+      document.getElementById("yellow").addEventListener("click", function(){
+          return characteristic.writeValue(Uint8Array.of(55));
+      });
+
       document.getElementById("white").addEventListener("click", function(){
-        return characteristic.writeValue(Uint8Array.of(53));
+        return characteristic.writeValue(Uint8Array.of(56));
+      });
+
+      document.querySelector("#brightness").addEventListener ("input", function () {
+        return characteristic.writeValue(Uint8Array.of(this.value));
       });
 
   })
@@ -43,7 +41,6 @@ document.getElementById("connect").addEventListener("click", function() {
 
       document.getElementById("status").className = "on";  
       console.log('Lamp is connected');
-
 
   })
   .catch(error => { 

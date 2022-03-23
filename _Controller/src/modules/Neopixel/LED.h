@@ -7,5 +7,5 @@ class LED{
         LED();
         void init();
         void update(int r, int g, int b);       
-   
+        void brightness(int b);
 };

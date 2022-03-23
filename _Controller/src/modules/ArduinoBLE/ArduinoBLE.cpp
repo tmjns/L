@@ -47,27 +47,36 @@ void ArduinoBLE::update(){
 
             if (switchCharacteristic.written()) {
 
-                if (switchCharacteristic.value() == 48) {   
+                Serial.println(switchCharacteristic.value());
+                led.brightness(switchCharacteristic.value());
+
+                if (switchCharacteristic.value() == 51) { 
+                    Serial.println("off");  
                     led.update(0,0,0); 
                 }
 
-                if (switchCharacteristic.value() == 49) {  //Red
+                if (switchCharacteristic.value() == 52) {  //Red
+                    Serial.println("red"); 
                     led.update(255,0,0);     
                 }
 
-                if (switchCharacteristic.value() == 50) {  //Green 
+                if (switchCharacteristic.value() == 53) {  //Green 
+                    Serial.println("green"); 
                     led.update(0,255,0);       
                 }
 
-                if (switchCharacteristic.value() == 51) {  //Blue
+                if (switchCharacteristic.value() == 54) {  //Blue
+                    Serial.println("blue"); 
                     led.update(0,0,255);          
                 }
 
-                if (switchCharacteristic.value() == 52) {  //Yellow 
+                if (switchCharacteristic.value() == 55) {  //Yellow 
+                    Serial.println("yellow"); 
                     led.update(200,188,14);           
                 }
 
-                if (switchCharacteristic.value() == 53) {  //White 
+                if (switchCharacteristic.value() == 56) {  //White 
+                    Serial.println("white"); 
                     led.update(255,255,255);           
                 }
 

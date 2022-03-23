@@ -8,7 +8,7 @@ LED::LED(){}
 void LED::init(){
     Serial.println("LED init");
     pixels.begin();
-    pixels.setBrightness(5);
+    brightness(5);
 }
 
 void LED::update(int r, int g, int b){
@@ -18,4 +18,8 @@ void LED::update(int r, int g, int b){
         pixels.show(); 
         delay(1); 
     }
+}
+
+void LED::brightness(int b){
+    pixels.setBrightness(b);
 }
