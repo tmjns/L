@@ -1,5 +1,6 @@
 body{
   background-color: rgb(24, 24, 24);
+  overflow-y: hidden;
 
   #status{
     width: 100%;
@@ -10,7 +11,7 @@ body{
 
   button{
     width: 100%;
-    height: 80px;
+    height: 8vh;
     margin-bottom: 5px;
     background-color: rgb(58, 58, 58);
     border: none;
