@@ -1,8 +1,15 @@
 {
-  "background_color": "purple",
-  "description": "Shows random fox pictures. Hey, at least it isn't cats.",
+  "background_color": "black",
+  "description": "Controlls BLE corner lamp.",
   "display": "fullscreen",
-  "name": "Awesome fox pictures",
-  "short_name": "Foxes",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "L - the awesome corner lamp",
+  "short_name": "L",
   "start_url": "https://corner-lamp.netlify.app/"
 }
