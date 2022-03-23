@@ -4,13 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.webmanifest">
     <title>Corner-Lamp</title>
-    <script>
-      // Registering our Service worker
-      if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js', { scope: './' })
-      }
-    </script>
   </head>
   <body>
     <div id="status" class="off"></div>
@@ -27,6 +22,7 @@
     <input id="brightness" type="range" min="5" max="50" step="5" value="0">
     <hr>
     <button id="off">Light off</button>
+    <button class="add-button">Add to home screen</button>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
