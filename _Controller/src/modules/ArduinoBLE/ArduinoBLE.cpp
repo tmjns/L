@@ -40,15 +40,17 @@ void ArduinoBLE::update(){
 
     if (central) {
         Serial.print("Connected to central: ");
-        // print the central's MAC address:
         Serial.println(central.address());
 
         while (central.connected()) {
 
             if (switchCharacteristic.written()) {
 
-                Serial.println(switchCharacteristic.value());
-                led.brightness(switchCharacteristic.value());
+                // Serial.println(switchCharacteristic.value());
+                
+                if(switchCharacteristic.value() <= 50){
+                    led.brightness(switchCharacteristic.value());
+                }
 
                 if (switchCharacteristic.value() == 51) { 
                     Serial.println("off");  
@@ -57,7 +59,7 @@ void ArduinoBLE::update(){
 
                 if (switchCharacteristic.value() == 52) {  //Red
                     Serial.println("red"); 
-                    led.update(255,0,0);     
+                    led.update(255,0,0);   
                 }
 
                 if (switchCharacteristic.value() == 53) {  //Green 
@@ -78,7 +80,7 @@ void ArduinoBLE::update(){
                 if (switchCharacteristic.value() == 56) {  //White 
                     Serial.println("white"); 
                     led.update(255,255,255);           
-                }
+                } 
 
             }
         }
