@@ -1,7 +1,7 @@
 {
   "background_color": "black",
   "description": "Controlls BLE corner lamp.",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "icon.png",
@@ -9,7 +9,6 @@
       "type": "image/png"
     }
   ],
-  "name": "L - the awesome corner lamp",
-  "short_name": "L",
+  "short_name": "Lamp",
   "start_url": "https://corner-lamp.netlify.app/"
 }
