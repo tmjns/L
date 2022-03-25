@@ -3,25 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
     <link rel="manifest" href="manifest.json">
-    <title>Corner-Lamp</title>
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css"/> <!--extra / before external files, otherwise they cause an error -->
+    <script src="/js/swiper-bundle.min.js"></script> <!--extra / before external files, otherwise they cause an error -->
   </head>
+
   <body>
-    <section id="status" class="off"></section>
-    <button id="connect">Connect</button>
-    <hr>
-    <section id="select">
-      <button id="red">Red</button>
-      <button id="green">Green</button>
-      <button id="blue">Blue</button>
-      <button id="yellow">Yellow</button>
-      <button id="white">White</button>
+
+    <section class="main">
+      <section id="status-bar" class="offline"></section>
+      <button id="connect">Connect</button>
     </section>
-    <hr>
-    <input id="brightness" type="range" min="5" max="50" step="5" value="0">
-    <hr>
-    <button id="off">Light off</button>
+    
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div id="red" class="swiper-slide"></div>
+        <div id="green" class="swiper-slide"></div>
+        <div id="blue" class="swiper-slide"></div>
+        <div id="yellow" class="swiper-slide"></div>
+        <div id="white" class="swiper-slide"></div>
+      </div>
+    </div>
+
+    <section class="main">
+      <input id="brightness" type="range" min="5" max="50" step="1" value="0">
+      <button id="light-off">Light off</button>
+    </section>
+    
     <script type="module" src="/main.js"></script>
+
   </body>
 </html>
