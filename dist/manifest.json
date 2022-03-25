@@ -1,7 +1,7 @@
 {
   "background_color": "black",
   "description": "Controlls BLE corner lamp.",
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "icon.png",
