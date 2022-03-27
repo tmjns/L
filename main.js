@@ -4,7 +4,8 @@ const swiper = new Swiper(".mySwiper", {
     slidesPerView:  2,
     spaceBetween: 20,
     freeMode: true,
-    centeredSlides: true
+    centeredSlides: true,
+    loop: true
 });
 
 document.getElementById("connect").addEventListener("click", function() {
