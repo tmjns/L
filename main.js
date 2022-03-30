@@ -5,7 +5,7 @@ const swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     freeMode: true,
     centeredSlides: true,
-    loop: true
+    loop: false
 });
 
 document.getElementById("connect").addEventListener("click", function() {
