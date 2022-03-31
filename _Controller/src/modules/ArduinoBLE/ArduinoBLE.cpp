@@ -52,34 +52,46 @@ void ArduinoBLE::update(){
                     led.brightness(switchCharacteristic.value());
                 }
 
+                //
+
                 if (switchCharacteristic.value() == 51) { 
                     Serial.println("off");  
-                    led.update(0,0,0); 
+                    led.solid(0,0,0); 
                 }
 
                 if (switchCharacteristic.value() == 52) {  //Red
                     Serial.println("red"); 
-                    led.update(255,0,0);   
+                    led.solid(255,0,0);   
                 }
 
                 if (switchCharacteristic.value() == 53) {  //Green 
                     Serial.println("green"); 
-                    led.update(0,255,0);       
+                    led.solid(0,255,0);       
                 }
 
                 if (switchCharacteristic.value() == 54) {  //Blue
                     Serial.println("blue"); 
-                    led.update(0,0,255);          
+                    led.solid(0,0,255);          
                 }
 
                 if (switchCharacteristic.value() == 55) {  //Yellow 
                     Serial.println("yellow"); 
-                    led.update(200,188,14);           
+                    led.solid(200,188,14);           
                 }
 
                 if (switchCharacteristic.value() == 56) {  //White 
                     Serial.println("white"); 
-                    led.update(255,255,255);           
+                    led.solid(255,255,255);           
+                } 
+
+                if (switchCharacteristic.value() == 57) {  //Orange 
+                    Serial.println("orange"); 
+                    led.solid(230, 126, 34);          
+                } 
+
+                if (switchCharacteristic.value() == 58) {  //Purple 
+                    Serial.println("purple"); 
+                    led.solid(155, 89, 182);       
                 } 
 
             }
@@ -90,3 +102,4 @@ void ArduinoBLE::update(){
         Serial.println(central.address());
     }
 }
+

@@ -46,6 +46,21 @@ document.getElementById("connect").addEventListener("click", function() {
             return characteristic.writeValue(Uint8Array.of(56));
         });
 
+        document.getElementById("orange").addEventListener("click", function(){
+            console.log("orange");
+            return characteristic.writeValue(Uint8Array.of(57));
+        });
+
+        document.getElementById("purple").addEventListener("click", function(){
+            console.log("purple");
+            return characteristic.writeValue(Uint8Array.of(58));
+        });
+
+
+
+
+
+        // brightness controll
         document.querySelector("#brightness").addEventListener ("input", function () {
             console.log(this.value);
             return characteristic.writeValue(Uint8Array.of(this.value));

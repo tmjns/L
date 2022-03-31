@@ -6,6 +6,6 @@ class LED{
     
         LED();
         void init();
-        void update(int r, int g, int b);       
+        void solid(int r, int g, int b);       
         void brightness(int br);
 };
