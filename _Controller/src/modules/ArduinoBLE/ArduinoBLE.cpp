@@ -66,7 +66,7 @@ void ArduinoBLE::update(){
 
                 if (switchCharacteristic.value() == 53) {  //Green 
                     Serial.println("green"); 
-                    led.solid(0,255,0);       
+                    led.solid(0x00FF00);       
                 }
 
                 if (switchCharacteristic.value() == 54) {  //Blue
