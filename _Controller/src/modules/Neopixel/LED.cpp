@@ -12,9 +12,9 @@ void LED::init(){
     pixels.setBrightness(5);
 }
 
-void LED::solid(unsigned long color){
+void LED::solid(int r, int g, int b){
     for(int i=0; i<NUMPIXELS; i++) {
-        pixels.setPixelColor(i, pixels.Color(color));
+        pixels.setPixelColor(i, pixels.Color(r, g, b));
         pixels.show(); 
     }
 }

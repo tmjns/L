@@ -66,7 +66,7 @@ void ArduinoBLE::update(){
 
                 if (switchCharacteristic.value() == 53) {  //Green 
                     Serial.println("green"); 
-                    led.solid(0x00FF00);       
+                    led.solid(0,255,0);       
                 }
 
                 if (switchCharacteristic.value() == 54) {  //Blue
@@ -76,7 +76,7 @@ void ArduinoBLE::update(){
 
                 if (switchCharacteristic.value() == 55) {  //Yellow 
                     Serial.println("yellow"); 
-                    led.solid(200,188,14);           
+                    led.solid(255,255,0);           
                 }
 
                 if (switchCharacteristic.value() == 56) {  //White 
@@ -84,14 +84,9 @@ void ArduinoBLE::update(){
                     led.solid(255,255,255);           
                 } 
 
-                if (switchCharacteristic.value() == 57) {  //Orange 
-                    Serial.println("orange"); 
-                    led.solid(230, 126, 34);          
-                } 
-
-                if (switchCharacteristic.value() == 58) {  //Purple 
+                if (switchCharacteristic.value() == 57) {  //Purple 
                     Serial.println("purple"); 
-                    led.solid(155, 89, 182);       
+                    led.solid(170, 0, 255);       
                 } 
 
             }
