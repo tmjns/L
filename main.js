@@ -19,7 +19,7 @@ async function getPermittedBluetoothDevices() {
       device.addEventListener('advertisementreceived', async (evt) => {
         // Stop the scan to conserve power on mobile devices.
         abortController.abort();
-   
+        
         // At this point, we know that the device is in range, and we can attempt
         // to connect to it.
         await evt.device.gatt.connect();
@@ -34,7 +34,7 @@ async function getPermittedBluetoothDevices() {
 
 
 document.getElementById("connect").addEventListener("click", function() {
-
+    console.log("press")
     getPermittedBluetoothDevices()
 
 //     navigator.bluetooth.requestDevice({ filters: [{ services: ['4fafc201-1fb5-459e-8fcc-c5c9c331914b'] }] })
