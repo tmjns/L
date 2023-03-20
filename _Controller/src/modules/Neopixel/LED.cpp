@@ -10,6 +10,7 @@ void LED::init(){
     pixels.begin();
     pixels.clear();
     pixels.setBrightness(5);
+    solid(255,255,255);
 }
 
 void LED::solid(int r, int g, int b){

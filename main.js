@@ -5,7 +5,7 @@ const swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     freeMode: true,
     centeredSlides: true,
-    loop: true
+    loop: false
 });
 
 
@@ -67,21 +67,25 @@ document.getElementById("connect").addEventListener("click", function() {
 
         document.getElementById("white").addEventListener("click", function(){
             console.log("white");
+            console.log(characteristic.writeValue(Uint8Array.of(56)));
             return characteristic.writeValue(Uint8Array.of(56));
         });
 
         document.getElementById("purple").addEventListener("click", function(){
             console.log("purple");
+            console.log(characteristic.writeValue(Uint8Array.of(57)));
             return characteristic.writeValue(Uint8Array.of(57));
         });
 
         document.getElementById("magenta").addEventListener("click", function(){
             console.log("magenta");
+            console.log(characteristic.writeValue(Uint8Array.of(58)));
             return characteristic.writeValue(Uint8Array.of(58));
         });
 
         document.getElementById("cyan").addEventListener("click", function(){
             console.log("cyan");
+            console.log(characteristic.writeValue(Uint8Array.of(59)));
             return characteristic.writeValue(Uint8Array.of(59));
         });
 
