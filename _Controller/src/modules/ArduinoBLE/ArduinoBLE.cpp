@@ -89,6 +89,16 @@ void ArduinoBLE::update(){
                     led.solid(170, 0, 255);       
                 } 
 
+                if (switchCharacteristic.value() == 58) {  //Magenta 
+                    Serial.println("magenta"); 
+                    led.solid(255, 0, 127);       
+                } 
+
+                if (switchCharacteristic.value() == 59) {  //Cyan 
+                    Serial.println("cyan"); 
+                    led.solid(102, 255, 255);       
+                } 
+
             }
         }
 

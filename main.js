@@ -5,7 +5,7 @@ const swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     freeMode: true,
     centeredSlides: true,
-    loop: false
+    loop: true
 });
 
 
@@ -73,6 +73,16 @@ document.getElementById("connect").addEventListener("click", function() {
         document.getElementById("purple").addEventListener("click", function(){
             console.log("purple");
             return characteristic.writeValue(Uint8Array.of(57));
+        });
+
+        document.getElementById("magenta").addEventListener("click", function(){
+            console.log("magenta");
+            return characteristic.writeValue(Uint8Array.of(58));
+        });
+
+        document.getElementById("cyan").addEventListener("click", function(){
+            console.log("cyan");
+            return characteristic.writeValue(Uint8Array.of(59));
         });
 
         // brightness controll
